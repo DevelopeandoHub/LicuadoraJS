@@ -2,17 +2,19 @@
 var estadoLicuadora = "apagado";
 var sonidoLicuadora = document.getElementById( "blender-sound" );
 var botonLicuadora = document.getElementById( "blender-button-sound" );
-
+var licuadora = document.getElementById("blender");
 
 function controlarLicuadora() {
   if ( estadoLicuadora == "apagado" ) {
     estadoLicuadora = "encendido";
     hacerBrrBrr();
-    document.getElementById( "blender-button" ).style.backgroundColor = "green";
+    licuadora.classList.add("active");
+    /* document.getElementById( "blender-button" ).style.backgroundColor = "green"; */
   } else {
     estadoLicuadora = "apagado";
     hacerBrrBrr();
-    document.getElementById( "blender-button" ).style.backgroundColor = "red";
+    licuadora.classList.remove("active");
+    /* document.getElementById( "blender-button" ).style.backgroundColor = "red"; */
   }
 }
 
